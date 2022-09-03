@@ -1,0 +1,22 @@
+{
+  "name": "javascript-udemy",
+  "version": "1.0.0",
+  "description": "Learning project",
+  "main": "assets/javascript/app.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionafan2/javascript-the-complete-guide-2020-beginner-advanced.git"
+  },
+  "author": "Pavlo Cherniavskyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ionafan2/javascript-the-complete-guide-2020-beginner-advanced/issues"
+  },
+  "homepage": "https://github.com/ionafan2/javascript-the-complete-guide-2020-beginner-advanced#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
