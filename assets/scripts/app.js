@@ -5,7 +5,13 @@ currentResult += 10;
 
 addBtn.addEventListener('click', add);
 
+function getUserInput() {
+  return parseInt(userInput.value);
+}
+
 function add() {
-  currentResult += parseInt(userInput.value);
-  outputResult(currentResult);
+  const calcDesc = `${currentResult} + ${getUserInput()}`;
+  currentResult += getUserInput();
+
+  outputResult(currentResult, calcDesc);
 }
