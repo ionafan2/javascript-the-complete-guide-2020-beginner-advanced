@@ -15,8 +15,15 @@ function add() {
     let initialRes = currentResult;
     currentResult += parseInt(userInput.value);
     outputResult(currentResult, createAndWriteLog('+', initialRes, parseInt(userInput.value)));
-    logEntries.push(parseInt(userInput.value))
-    console.log(logEntries[0]);
+    let logEntry = {
+        operation: 'ADD',
+        prevResult: initialRes,
+        number: parseInt(userInput.value),
+        result: currentResult
+    }
+    console.log(logEntry.operation);
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 function subtract() {
