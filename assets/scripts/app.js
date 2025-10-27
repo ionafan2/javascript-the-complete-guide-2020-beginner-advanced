@@ -1,51 +1,38 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
+let logEntries = [];
 
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
 divideBtn.addEventListener('click', divide);
 multiplyBtn.addEventListener('click', multiply);
 
-function getUserInput() {
-  return parseInt(userInput.value);
+function createAndWriteLog(operator, before, calcNumber) {
+    return `${before} ${operator} ${calcNumber}`;
 }
 
-function createAndWriteLog(operator, before, calcNumber) {
-  return `${before} ${operator} ${calcNumber}`;
-}
-Í;
 function add() {
-  let initialRes = currentResult;
-  currentResult += getUserInput();
-  outputResult(
-    currentResult,
-    createAndWriteLog('+', initialRes, getUserInput())
-  );
+    let initialRes = currentResult;
+    currentResult += parseInt(userInput.value);
+    outputResult(currentResult, createAndWriteLog('+', initialRes, parseInt(userInput.value)));
+    logEntries.push(parseInt(userInput.value))
+    console.log(logEntries[0]);
 }
 
 function subtract() {
-  let initialRes = currentResult;
-  currentResult -= getUserInput();
-  outputResult(
-    currentResult,
-    createAndWriteLog('-', initialRes, getUserInput())
-  );
+    let initialRes = currentResult;
+    currentResult -= parseInt(userInput.value);
+    outputResult(currentResult, createAndWriteLog('-', initialRes, parseInt(userInput.value)));
 }
 
 function divide() {
-  let initialRes = currentResult;
-  currentResult /= getUserInput();
-  outputResult(
-    currentResult,
-    createAndWriteLog('/', initialRes, getUserInput())
-  );
+    let initialRes = currentResult;
+    currentResult /= parseInt(userInput.value);
+    outputResult(currentResult, createAndWriteLog('/', initialRes, parseInt(userInput.value)));
 }
 
 function multiply() {
-  let initialRes = currentResult;
-  currentResult *= getUserInput();
-  outputResult(
-    currentResult,
-    createAndWriteLog('/', initialRes, getUserInput())
-  );
+    let initialRes = currentResult;
+    currentResult *= parseInt(userInput.value);
+    outputResult(currentResult, createAndWriteLog('/', initialRes, parseInt(userInput.value)));
 }
